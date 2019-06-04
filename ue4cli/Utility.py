@@ -133,6 +133,7 @@ class Utility:
 		"""
 		Executes a child process and waits for it to complete
 		"""
+		print(" ".join(command))
 		returncode = subprocess.call(command, cwd=cwd, shell=shell)
 		if raiseOnError == True and returncode != 0:
 			raise Exception('child process ' + str(command) + ' failed with exit code ' + str(returncode))
